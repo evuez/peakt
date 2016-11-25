@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pick somethin' to eat.">
+    <meta name="author" content="evuez">
+
+    <title>Peakt</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="<%= page_path(@conn, :index) %>" class="logo">Peakt</a>
+      <span class="badge" id="count"></span>
+    </header>
+
+    <main role="main">
+    <%= render @view_module, @view_template, assigns %>
+    </main>
+
+    <script>window.roomToken = "<%= assigns[:room_token] %>";</script>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

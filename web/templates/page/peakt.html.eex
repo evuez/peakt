@@ -1,0 +1,9 @@
+<input id="menu" type="text" placeholder="🌮,🍔,🌯,🍕">
+
+<div class="big" id="pick">🍚</div>
+
+<div id="actions">
+  <button class="vote" id="up">😍</button>
+  <button class="vote" id="down">🤢</button>
+</div>
+
